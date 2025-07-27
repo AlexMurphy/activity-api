@@ -8,6 +8,8 @@ I spent some time thinking about all the weather conditions that might affect th
 
 I then developed the UI tests using Playwright first hardcoding everything into the spec itself as simple proof of concept approach then I created a page object model and asbtracted out actions and data that are reused across multiple tests.
 
+I added metadata to the projects defined the playwright config to allow for a conditon replaces a click with a tap if the tests are being executed on anything other than a desktop browser. This reduces duplication as the same test can be used across multiple types of devices.  
+
 I then wrote the API tests grouping them with comments so I could keep track of the areas I covered.
 
 For all the automated tests I used loops and scenario outline to reduce the potential for duplication and provide and easy way to update values without have to touch the rest of the code.
